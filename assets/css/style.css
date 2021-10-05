@@ -1,0 +1,13 @@
+:root {
+  --pearl-gray: #ececec;
+  --light-peach: #f7cbbf;
+  --apricot: #fcab98;
+  --medium-green: #59c7b4;
+  --light-emerald: #1b9d6b;
+  --parrot-green: #628a28;
+}
+
+aside {
+  background-color: var(--light-peach);
+  height: 100vh;
+}
