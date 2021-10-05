@@ -11,3 +11,7 @@ aside {
   background-color: var(--light-peach);
   height: 100vh;
 }
+
+.recipe-card {
+  background-color: var(--parrot-green);
+}
