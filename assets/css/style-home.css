@@ -1,0 +1,40 @@
+
+:root {
+    --pearl-gray: #ececec;
+    --light-peach: #f7cbbf;
+    --apricot: #fcab98;
+    --medium-green: #59c7b4;
+    --light-emerald: #1b9d6b;
+    --parrot-green: #628a28;
+}
+
+.nav-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+.card{
+    --hue: var(--hue-neutral) padding: 0;
+      margin: 0;
+      display: flex;
+      width: 100vw;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+   
+    
+}
+.card-panel{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+}
+  
+footer{
+    display: block;
+    background-color: var(--apricot);
+}
+  
