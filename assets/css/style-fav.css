@@ -18,9 +18,19 @@ body {
       background-color: var(--apricot);
   }
 
+  .containercard {  
+      content: "";
+      clear: both;
+      display: table;
+      padding: 10px;
+
+  }
   .card {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-    max-width: 300px;
-    padding: 30px 40px;
+    float:left;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 8px 0px;
+    max-width: 25%;
+    padding: 5x;
     margin: 50px;
   }
+
+  
