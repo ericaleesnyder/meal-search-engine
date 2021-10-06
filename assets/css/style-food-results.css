@@ -15,3 +15,8 @@ aside {
 .recipe-card {
   background-color: var(--parrot-green);
 }
+
+.button {
+  width: 100%;
+  margin: 10px 0;
+}

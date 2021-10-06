@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css"> <!--linked style css in case we want to override materialize content-->
+    <link rel="stylesheet" href="./assets/css/style-food-results.css"> <!--linked style css in case we want to override materialize content-->
     <title>Document</title>
 </head>
 <body>
   <div class="row"> <!--MAIN PAGE = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
     <aside class="col s3"> <!--left side of webpage - column?-->
       <div> 
+        <h4>Search for a Recipe!</h4>
+        <p>In the mood for something else? Search with a different ingredient!</p>
+        <form class="row">
+          <div class="input-field col">
+            <input placeholder="Type an Ingredient" id="ingredient-search" type="text" class="validate">
+            <label for="ingredient-search">Type an Ingredient</label>
+            <a class="waves-effect waves-light btn button">Search</a>
+          </div>
+        </form>
        <!--card for instructions/search info from prev page-->
-       test
       </div>
       <div>
-        more test
+        <h4>Favorite Recipes</h4>
+        <a class="waves-effect waves-light btn button">Favorite recipe 1</a>
+        <a class="waves-effect waves-light btn button">Favorite recipe 2</a>
+        <a class="waves-effect waves-light btn button">Favorite recipe 3</a>
         <!--card with buttons for favorited recipes-->
       </div>
     </aside>
@@ -39,7 +50,7 @@
       </div>
       <div class="row"> <!--card-->
         <div class="col s12 ">
-          <div class="card blue-grey darken-1">
+          <div class="card recipe-card darken-1">
             <div class="card-content white-text">
               <span class="card-title">Recipe 2</span>
               <p>I am a very simple card. I am good at containing small bits of information.
