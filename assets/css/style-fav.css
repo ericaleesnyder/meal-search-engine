@@ -1,0 +1,26 @@
+:root {
+    --pearl-gray: #ececec;
+    --light-peach: #f7cbbf;
+    --apricot: #fcab98;
+    --medium-green: #59c7b4;
+    --light-emerald: #1b9d6b;
+    --parrot-green: #628a28;
+  }
+
+  html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+  .nav-wrapper{
+      background-color: var(--apricot);
+  }
+
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    max-width: 300px;
+    padding: 30px 40px;
+    margin: 50px;
+  }
