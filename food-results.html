@@ -20,7 +20,7 @@
           <div class="input-field col">
             <input placeholder="Type an Ingredient" id="ingredient-search" type="text" class="validate">
             <label for="ingredient-search">Type an Ingredient</label>
-            <a class="waves-effect waves-light btn button">Search</a>
+            <a class="waves-effect waves-light btn button" id="new-search">Search</a>
           </div>
         </form>
       </div>
@@ -31,6 +31,10 @@
       </div>
     </aside>
     <section class="col s9" id="card-display">
+      <div style="display: flex; flex-direction: row; width: 100%; align-items: center; justify-content: space-between;">
+        <h1 id="search-title"></h1>
+        <a class="waves-effect waves-light btn right" id="drinks-page">Now, Drinks!</a>
+      </div>
     </section>
     
   </div>
