@@ -7,6 +7,7 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style-food-results.css"> <!--linked style css in case we want to override materialize content-->
+    
     <title>Document</title>
 </head>
 <body>
@@ -22,28 +23,26 @@
             <a class="waves-effect waves-light btn button">Search</a>
           </div>
         </form>
-       <!--card for instructions/search info from prev page-->
       </div>
       <div>
         <h4>Favorite Recipes</h4>
-        <a class="waves-effect waves-light btn button">Favorite recipe 1</a>
-        <a class="waves-effect waves-light btn button">Favorite recipe 2</a>
-        <a class="waves-effect waves-light btn button">Favorite recipe 3</a>
-        <!--card with buttons for favorited recipes-->
+      </div>
+      <div id="user-favorites">
       </div>
     </aside>
-    <section class="col s9"> <!--right side of webpage - column?-->
+    <section class="col s9" id="card-display">
       <div class="row"> <!--card-->
         <div class="col s12 ">
           <div class="card recipe-card darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Recipe 1</span>
+              <span class="card-title" id="recipe-1">Chicken Parmesan</span>
               <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
+                I am convenient because I require little markup to use effectively.</p>
+              <div class="card-action" id="card-test">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+                <a class="btn-floating btn waves-effect waves-light favorite-button"><i class="material-icons">+</i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -52,13 +51,14 @@
         <div class="col s12 ">
           <div class="card recipe-card darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Recipe 2</span>
+              <span class="card-title" id="recipe-1">Eggplant Parmesan</span>
               <p>I am a very simple card. I am good at containing small bits of information.
-              I am convenient because I require little markup to use effectively.</p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
+                I am convenient because I require little markup to use effectively.</p>
+              <div class="card-action" id="card-test">
+                <a href="#">This is a link</a>
+                <a href="#">This is a link</a>
+                <a class="btn-floating btn waves-effect waves-light favorite-button"><i class="material-icons">+</i></a>
+              </div>
             </div>
           </div>
         </div>
@@ -67,6 +67,7 @@
     
   </div>
     <!-- Compiled and minified JavaScript -->
+ <script src="./assets/js/script-food-result.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>          
 </body>
 </html>
