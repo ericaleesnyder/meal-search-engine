@@ -36,12 +36,13 @@ function searchDrinks(query) {
       }
       for (var i = 0; i < loopCnt; i++) {
         var drink = data.drinks[i];
+        var urlRecipe = apiRecipeURL + drink.idDrink + '-' + drink.strDrink.replace(" ", "-");
+        drink['recipe-url'] = urlRecipe;
         // Save drinks to allDrinks object for later
-        allDrinks[drink.idDrink] = data.drinks[i];
-        // fetchDrinkDetails(data.drinks[i].idDrink);
+        allDrinks[drink.idDrink] = drink;
         var drinkCard = $("#hidden-drink").clone(true);
         drinkCard.find(".card-title").text(drink.strDrink);
-        drinkCard.find(".recipe-link").attr("href", apiRecipeURL + drink.idDrink + '-' + drink.strDrink.replace(" ", "-"));
+        drinkCard.find(".recipe-link").attr("href", urlRecipe);
         drinkCard.find(".favorite-btn").attr("drink-id", drink.idDrink);
         drinkCard.appendTo("#drinks-container");
         // Set new id to recipe container to override hidden and make it show 
@@ -67,14 +68,14 @@ $(".favorite-btn").on("click", function() {
         favoriteDrinks[drinkId] = allDrinks[drinkId];
         // Save new drink list to local storage
         localStorage.setItem("favorite-drinks", JSON.stringify(favoriteDrinks));
-    
         var favoriteBtn = $("#hidden-btn").clone(true);
-        var recipeURL = apiRecipeURL + favoriteDrinks[drinkId].idDrink + '-' + favoriteDrinks[drinkId].strDrink.replace(" ", "-");
         favoriteBtn.attr("id", "");
-        favoriteBtn.attr("href", recipeURL);
+        favoriteBtn.attr("href", favoriteDrinks[drinkId].urlRecipe);
         favoriteBtn.text(favoriteDrinks[drinkId].strDrink);
+        // favoriteBtn.text(resultUrl[urlRecipe]).hide();
         favoriteBtn.appendTo("#favorite-btn-container");
-        console.log(drinkId);
+        console.log(drinkId.strDrink);
+        // console.log(urlRecipe);
     }
 });
 
@@ -92,7 +93,7 @@ if(allFavoriteDrinkJSON != null) {
         var recipeURL = apiRecipeURL + favoriteDrink.idDrink + '-' + favoriteDrink.strDrink.replace(" ", "-");
         // remove the id so that the hidden styling won't be there
         favoriteBtn.attr("id", "");
-        // update the a href to the api url
+        // update the href to the api url
         favoriteBtn.attr("href", recipeURL);
         // Change the button text to the drink name
         favoriteBtn.text(favoriteDrink.strDrink);
@@ -100,3 +101,15 @@ if(allFavoriteDrinkJSON != null) {
         favoriteBtn.appendTo("#favorite-btn-container");
     }
 }
+
+// var favoriteDrinksJSON = localStorage.getItem("favorite-drinks");
+// var favoriteDrinks = {};
+// if(favoriteDrinksJSON != null) {
+//     // If there are saved drinks, convert it to an object so we can add to it
+//     favoriteDrinks = JSON.parse(favoriteDrinksJSON);
+// }
+// for(const drinkId in favoriteDrinks) {
+//     var drinkData = favoriteDrinks[drinkId];
+        
+//     var urlRecipe = drinkData['recipe-url'];
+// }
