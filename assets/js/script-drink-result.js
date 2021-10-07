@@ -4,6 +4,7 @@ var searchForm = $("#search-form");
 var apiRecipeURL = "https://www.thecocktaildb.com/drink/";
 var allDrinks = {};
 var allFavoriteDrinkJSON = localStorage.getItem("favorite-drinks");
+var backFoodBtn =$("#back-food")[0];
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -113,3 +114,11 @@ if(allFavoriteDrinkJSON != null) {
         
 //     var urlRecipe = drinkData['recipe-url'];
 // }
+// function backToFood(event) {
+//   window.history.back();
+// }
+backFoodBtn.addEventListener ('click', function (event){
+  event.preventDefault();
+  console.log('hi');
+  window.history.back();
+}); // I couldn't figure it out in jQuery, but I got it with plain JS! it works!
