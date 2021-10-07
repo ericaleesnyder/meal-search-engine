@@ -52,7 +52,6 @@
 
 
 
-
 var userFavs = document.getElementById('user-favorites')
 var favoritedRecipes = []
 
