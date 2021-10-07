@@ -49,21 +49,7 @@
 //   {name: "margarita", url: "https://www.liquor.com/recipes/margarita/"},
 // ]
 
-// function displayFoodResults(results) {
-//   // console.log(results); 
-//   // may need this to checkout the full data response 
-//   for (var i = 0; i < results.length; i++) {
-//   // the results should return an array of 20 items
-//     var result = results[i];
-    // var name = result.ingredients.lable; RESULTS.INGREDIENTS.LABLE WILL BE THE TEXT CONTENT FOR CARD-TITLE
-//     var cuisineType = result.cuisineType[0];
-//     var mealType = result.mealType[0];
-//     var url = result.url;
 
-//   //write code to display the variables
-    
-//   }
-// }
 
 
 
@@ -73,21 +59,100 @@ var favoritedRecipes = []
 var cardDisplay = document.getElementById('card-display');
 var favBtn = document.getElementsByClassName('favorite-button');
 
+var query = "chicken";
+
+// edaman api test
+function getRecipes() {
+  // var id = "618defa3";
+  // var key = "c8342ea913a133a4c769f56f5867b798"
+
+  var url =
+    "https://api.edamam.com/api/recipes/v2?type=public&q=" +
+    query +
+    "&app_id=618defa3&app_key=c8342ea913a133a4c769f56f5867b798&random=true";
+
+  fetch(url)
+    .then(function (response) {
+      //   console.log(response);
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+
+      var hits = data.hits;
+      console.log(hits); 
+      
+      for (var i=0; i < hits.length; i++){
+        renderRecipes(hits[i]);
+      }
+      // var result = hits[i]
+      // var name = result.recipe.label;
+      // var cuisineType = result.recipe.cuisineType[0];
+      // var mealType = result.recipe.mealType[0];
+      // var url = result.recipe.url;
+    });
+}
+
+getRecipes();
+
+function renderRecipes (recipeData) {
+  var cardCol = document.createElement("div");
+  cardCol.setAttribute('class', "col s12");
+
+  var cardBgrnd = document.createElement("div");
+  cardBgrnd.setAttribute('class',"card recipe-card darken-1");
+  
+  var card = document.createElement("div");
+  card.setAttribute('class',"card-content white-text");
+
+  var cardTitle = document.createElement('span');
+  cardTitle.setAttribute('class',"card-title");
+  cardTitle.textContent = recipeData.recipe.label;
+
+  var recipeDataCuisine = document.createElement('p');
+  recipeDataCuisine.textContent = recipeData.recipe.cuisineType[0];
+
+  var recipeDataMeal = document.createElement('p');
+  recipeDataMeal.textContent = recipeData.recipe.mealType[0];
+
+  var cardAction = document.createElement('div');
+  cardAction.setAttribute('class', 'card-action');
+  
+  var cardUrl =document.createElement('a');
+  cardUrl.setAttribute('href', recipeData.recipe.url);
+  cardUrl.textContent = "Recipe Link"
+
+  var newFavBtn = document.createElement('a');
+  newFavBtn.setAttribute('class',"btn-floating btn waves-effect waves-light favorite-button");
+
+  var icon = document.createElement('i');
+  icon.setAttribute('class', 'material-icons');
+  icon.textContent = '+';
+
+  cardDisplay.appendChild(cardCol);
+  cardCol.appendChild(cardBgrnd);
+  cardBgrnd.appendChild(card);
+  card.appendChild(cardTitle);
+  cardTitle.append(recipeDataCuisine);
+  recipeDataCuisine.append(recipeDataMeal);
+  recipeDataMeal.append(cardAction);
+  cardAction.appendChild(cardUrl);
+  cardUrl.append(newFavBtn);
+  newFavBtn.appendChild(icon);
+}
+
 function renderFavs () {
   userFavs.innerHTML="";
   
   for (var i =0; i < favoritedRecipes.length; i++) {
     var recipeAdd = favoritedRecipes[i].name;
-    
     var favoritedBtn = document.createElement('a');
     
     favoritedBtn.textContent = recipeAdd
     favoritedBtn.setAttribute('data-index', i);
     favoritedBtn.setAttribute('class', 'waves-effect waves-light btn button')
     
-  
     userFavs.appendChild(favoritedBtn);
-  
   }
 };
 
