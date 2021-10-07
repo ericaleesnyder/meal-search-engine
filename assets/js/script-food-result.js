@@ -49,10 +49,6 @@
 //   {name: "margarita", url: "https://www.liquor.com/recipes/margarita/"},
 // ]
 
-
-
-
-
 var userFavs = document.getElementById('user-favorites')
 var favoritedRecipes = []
 
@@ -73,7 +69,6 @@ function getRecipes() {
 
   fetch(url)
     .then(function (response) {
-      //   console.log(response);
       return response.json();
     })
     .then(function (data) {
@@ -82,15 +77,11 @@ function getRecipes() {
       var hits = data.hits;
       console.log(hits); 
       
-      for (var i=0; i < hits.length; i++){
+      for (var i=0; i < 11; i++){
         renderRecipes(hits[i]);
       }
-      // var result = hits[i]
-      // var name = result.recipe.label;
-      // var cuisineType = result.recipe.cuisineType[0];
-      // var mealType = result.recipe.mealType[0];
-      // var url = result.recipe.url;
-    });
+    }
+    );
 }
 
 getRecipes();
@@ -133,11 +124,11 @@ function renderRecipes (recipeData) {
   cardCol.appendChild(cardBgrnd);
   cardBgrnd.appendChild(card);
   card.appendChild(cardTitle);
-  cardTitle.append(recipeDataCuisine);
-  recipeDataCuisine.append(recipeDataMeal);
-  recipeDataMeal.append(cardAction);
+  card.append(recipeDataCuisine);
+  card.append(recipeDataMeal);
+  card.append(cardAction);
   cardAction.appendChild(cardUrl);
-  cardUrl.append(newFavBtn);
+  cardAction.appendChild(newFavBtn);
   newFavBtn.appendChild(icon);
 }
 
@@ -146,11 +137,13 @@ function renderFavs () {
   
   for (var i =0; i < favoritedRecipes.length; i++) {
     var recipeAdd = favoritedRecipes[i].name;
+    var urlAdd = favoritedRecipes[i].url;
     var favoritedBtn = document.createElement('a');
     
     favoritedBtn.textContent = recipeAdd
     favoritedBtn.setAttribute('data-index', i);
-    favoritedBtn.setAttribute('class', 'waves-effect waves-light btn button')
+    favoritedBtn.setAttribute('class', 'waves-effect waves-light btn button');
+    favoritedBtn.setAttribute('href', urlAdd)
     
     userFavs.appendChild(favoritedBtn);
   }
@@ -168,24 +161,19 @@ function storeFav () {
   localStorage.setItem('fav food', JSON.stringify(favoritedRecipes));
 }
 
-
 cardDisplay.addEventListener('click', function (event) {
-  event.preventDefault();
-  
   var element = event.target;
  
   if (element.matches('i')) {
-    var recipeName = element.parentElement.parentElement.parentElement.firstChild.nextSibling.textContent;
-    console.log(recipeName);
+    var recipeName = element.parentElement.parentElement.parentElement.firstChild.textContent;
+    var recipeUrl = element.parentElement.parentElement.firstChild.href;
+    console.log(recipeUrl);
     
+    favoritedRecipes.push({name: recipeName, url: recipeUrl});
     
-    favoritedRecipes.push({name: recipeName, url:"url"});
-    
-      
     renderFavs();
     storeFav();
   }
-
 })
 
 init();
