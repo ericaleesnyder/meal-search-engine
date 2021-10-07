@@ -1,5 +1,5 @@
 var query = "chicken";
-var query2 = "vodka";
+var query2 = "stawberry";
 
 // edaman api test
 function edamamTest() {
@@ -25,8 +25,11 @@ edamamTest();
 
 // cocktailDB test
 function cocktailDBTest() {
-  var url =
-    "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + query2 +"&app_key=1";
+  var url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=13&app_key=1";
+    // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + query2 +"&app_key=1";
+    // "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12562&app_key=1";
+    // "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita&app_key=1"
+    // "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + query2 + "&a=Non_Alcoholic" + "&app_key=1";
 
   fetch(url)
     .then(function (response) {

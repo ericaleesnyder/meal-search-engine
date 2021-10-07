@@ -20,4 +20,11 @@
     width: 100%;
     margin: 10px 0;
   }
-  
+
+  #hidden-drink {
+    display: none;
+  }
+
+  #hidden-btn {
+    display: none;
+  }
