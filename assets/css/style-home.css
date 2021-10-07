@@ -6,6 +6,7 @@
     --medium-green: #59c7b4;
     --light-emerald: #1b9d6b;
     --parrot-green: #628a28;
+    
 }
 
 .nav-wrapper {
@@ -23,6 +24,12 @@
       align-items: center;
    
     
+}
+article{
+    font-size: 200%;
+}
+p{
+    font-size: 75%;
 }
 .card-panel{
     width: 800px;

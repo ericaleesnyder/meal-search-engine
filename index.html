@@ -7,19 +7,36 @@
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/style-home.css">
-    <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo center">Name of our Page</a>
-        </div>
-    </nav>
+    
 </head>
 <body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo center">Rapid Recipes</a>
+          <ul id="nav-mobile" class="left ">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="food-results.html">Food Results</a></li>
+            <li><a href="drink-results.html">Drink Results</a></li>
+                  </ul>
+                                     
+        </div>
+        <!--nav bar to here-->
+    </nav>
     <div class="card">
     <div class="card-panel container center-align">
-        <article>Instructions: </article>
-        <form id="searchForm container">
-            <input type="search" id="query" name="q" placeholder="Search...">
-            <button>Search</button>
+        <article>Are you passionate about cooking your next meal or simply don't know what to cook?
+            <p>
+            Rapid Recipes helps you search& find recipes based on one main ingredient, and
+            we also help you find recipes for drinks after!
+            </p>
+            
+            
+            <p>Instructions:  Type the main ingredient you crave for your next meal and click search!</p>
+        </article>
+        <!--add: action="./food-results.html"-->
+        <form id="searchForm">
+            <input type="text" class="seach" id="searchBox" name="q" placeholder="Search...">
+            <button id="btn btn-block">Search</button>
 
         </form>
     </div>
@@ -28,10 +45,35 @@
     
 
    
-   <footer>
-       2021 testing
-   </footer>
+   <!--footer copy from here-->
+   <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+            <li><a class="grey-text text-lighten-3" href="food-results.html">Food Results</a></li>
+            <li><a class="grey-text text-lighten-3" href="drink-results.html">Drink Results</a></li>
+            <li><a class="grey-text text-lighten-3" href="fav.html">Your Favorite </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2021 Copyright Text
+      </div>
+    </div>
+  </footer>
+<!--footer to here-->
     <!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>          
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>   
+<script src="./assets/js/home.js"> </script>       
 </body>
 </html>
