@@ -7,8 +7,8 @@
     --parrot-green: #628a28;
   }
 
-  html,
-body {
+html,
+  body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -19,18 +19,27 @@ body {
   }
 
   .containercard {  
-      content: "";
-      clear: both;
-      display: table;
-      padding: 10px;
+    content: "";
+    clear: both;
+    display: table;
+    padding: 10px;
 
-  }
-  .card {
-    float:left;
-    box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 8px 0px;
-    max-width: 25%;
-    padding: 5x;
-    margin: 50px;
-  }
+}
+.card {
+  float:left;
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 8px 0px;
+  max-width: 190px;
+  max-height: 190px;
+  padding: 5x;
+  margin: 50px;
+}
 
-  
+.page-footer{
+     left: 0;
+   bottom: 0;
+   width: 100%;
+   }
+p{
+  font-size: 15px;
+  text-align: center;
+}
