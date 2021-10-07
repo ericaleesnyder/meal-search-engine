@@ -72,10 +72,12 @@ var searchTitle = document.getElementById('search-title');
 searchTitle.textContent = query.substr(2) + ' Recipes';
 
 function getRecipes() {
+  
   var url =
   "https://api.edamam.com/api/recipes/v2?type=public&" +
   query +
   "&app_id=618defa3&app_key=c8342ea913a133a4c769f56f5867b798&random=true";
+
 
   fetch(url)
     .then(function (response) {
@@ -94,7 +96,9 @@ function getRecipes() {
     );
 }
 
-getRecipes();
+if (query !== ""){
+  getRecipes();
+}
 
 function renderRecipes (recipeData) {
   var cardCol = document.createElement("div");
@@ -198,8 +202,22 @@ function newFoodSearch(event) {
 
 newSearch.addEventListener('click', newFoodSearch);
 
-drinksPage.addEventListener('click', function(event) {
+drinksPage.addEventListener('click', function() {
   var drinksLocation = "./drink-results.html";
   location.assign(drinksLocation);
 })
+
 init();
+
+
+// FOR "BACK TO FOOD RECIPE RESULTS" BTN:
+// ADD EVENT LISTENER 
+// (CAN REMOVE THE A TAG BC THE A IS WITHIN A BUTTON. KEEP THE TEXT, BUT REMOVE THE A)
+// ON CLICK
+// WINDOW.HISTORY.BACK 
+
+// backButton.addEventListener('click', 'function() {
+//     window.history.back();
+// })
+
+// might need a prevent default, we'll find out 

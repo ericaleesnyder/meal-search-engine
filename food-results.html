@@ -11,8 +11,23 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="row"> <!--MAIN PAGE = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
-    <aside class="col s3"> <!--left side of webpage - column?-->
+  <!-- Header from Riri's Page -->
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo right">Rapid Recipes</a>
+        <ul id="nav-mobile" class="left">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="food-results.html">Food Results</a></li>
+          <li><a href="drink-results.html">Drink Results</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--MAIN PAGE = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
+  <main class="row">
+    <aside class="col s3"> <!--left side of webpage-->
       <div> 
         <h4>Search for a Recipe!</h4>
         <p>In the mood for something else? Search with a different ingredient!</p>
@@ -37,7 +52,7 @@
       </div>
     </section>
     
-  </div>
+  </main>
     <!-- Compiled and minified JavaScript -->
  <script src="./assets/js/script-food-result.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>          

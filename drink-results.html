@@ -9,10 +9,22 @@
     <title>Document</title>
 </head>
 <body>
-  <div class="row"> <!--MAIN PAGE CONTAINER = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo right">Rapid Recipes</a>
+        <ul id="nav-mobile" class="left">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="food-results.html">Food Results</a></li>
+          <li><a href="drink-results.html">Drink Results</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="row"> <!--MAIN PAGE CONTAINER = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
 
     <aside class="col m5 l3"> <!--left side of webpage - col-->
-
+      
       <div class="card-panel"> <!--card container for search section-->
         <h4>Search for a drink Recipe!</h4>
         <p>In the mood for something else? Search with a different ingredient!</p>
@@ -36,11 +48,17 @@
     </aside>
 
     <section class="col m7 l9"> <!--right side of webpage - col-->
-      <div class="row">
-        <div class="col s12 m8 l6">
-          <button class="waves-effect waves-light btn button"><a class="" href="food-results.html">Back to Food Recipe Results</a></button>
+      <div class ="row" style="display: flex; flex-direction: row; width: 100%; align-items: center; justify-content: space-between;">
+        <div class="col s12 m8 16">
+          <button class="waves-effect waves-light btn button" id="back-food">Back to Food Recipe Results</button>
+          <a class="waves-effect waves-light btn right" href="fav.html">To Your Favorites!</a>
         </div>
       </div>
+      <!-- <div class="row">
+        <div class="col s12 m8 l6">
+          <button class="waves-effect waves-light btn button" id="back-food">Back to Food Recipe Results</button>
+        </div>
+      </div> -->
       <div id="drinks-container">
 
       </div>
@@ -60,7 +78,7 @@
 
     </section>
     
-  </div>
+  </main>
   <script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
