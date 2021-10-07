@@ -49,23 +49,33 @@
 //   {name: "margarita", url: "https://www.liquor.com/recipes/margarita/"},
 // ]
 
+// function getParams() {
+//      // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
+//      var searchParamsArr = document.location.search;
+   
+//      // Get the query and format values
+//      var query = searchParamsArr[0].split('=').pop();
+   
+//      getRecipes(query);
+//    }
 var userFavs = document.getElementById('user-favorites')
 var favoritedRecipes = []
 
 var cardDisplay = document.getElementById('card-display');
 var favBtn = document.getElementsByClassName('favorite-button');
+var drinksPage = document.getElementById('drinks-page');
+var newSearch = document.getElementById('new-search');
+var ingredientSearch = document.getElementById('ingredient-search');
 
-var query = "chicken";
+var query = document.location.search.substr(1);
+var searchTitle = document.getElementById('search-title');
+searchTitle.textContent = query.substr(2) + ' Recipes';
 
-// edaman api test
 function getRecipes() {
-  // var id = "618defa3";
-  // var key = "c8342ea913a133a4c769f56f5867b798"
-
   var url =
-    "https://api.edamam.com/api/recipes/v2?type=public&q=" +
-    query +
-    "&app_id=618defa3&app_key=c8342ea913a133a4c769f56f5867b798&random=true";
+  "https://api.edamam.com/api/recipes/v2?type=public&" +
+  query +
+  "&app_id=618defa3&app_key=c8342ea913a133a4c769f56f5867b798&random=true";
 
   fetch(url)
     .then(function (response) {
@@ -111,6 +121,7 @@ function renderRecipes (recipeData) {
   
   var cardUrl =document.createElement('a');
   cardUrl.setAttribute('href', recipeData.recipe.url);
+  cardUrl.setAttribute('target', 'blank')
   cardUrl.textContent = "Recipe Link"
 
   var newFavBtn = document.createElement('a');
@@ -144,6 +155,7 @@ function renderFavs () {
     favoritedBtn.setAttribute('data-index', i);
     favoritedBtn.setAttribute('class', 'waves-effect waves-light btn button');
     favoritedBtn.setAttribute('href', urlAdd)
+    favoritedBtn.setAttribute('target', 'blank');
     
     userFavs.appendChild(favoritedBtn);
   }
@@ -176,4 +188,18 @@ cardDisplay.addEventListener('click', function (event) {
   }
 })
 
+function newFoodSearch(event) {
+  event.preventDefault();
+  var searchInput = ingredientSearch.value;
+
+  var newQuery = './food-results.html?q='+ searchInput;
+  location.assign(newQuery);
+}
+
+newSearch.addEventListener('click', newFoodSearch);
+
+drinksPage.addEventListener('click', function(event) {
+  var drinksLocation = "./drink-results.html";
+  location.assign(drinksLocation);
+})
 init();
