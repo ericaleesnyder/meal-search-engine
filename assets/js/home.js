@@ -15,7 +15,7 @@ function handleSearchFormSubmit(event) {
 
     var queryString =
         './food-results.html?q=' + searchInputVal;
-            console.log('yet?')
+            
 
     location.assign(queryString);
     
