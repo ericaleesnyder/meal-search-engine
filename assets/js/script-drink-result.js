@@ -73,10 +73,9 @@ $(".favorite-btn").on("click", function() {
         favoriteBtn.attr("id", "");
         favoriteBtn.attr("href", favoriteDrinks[drinkId].urlRecipe);
         favoriteBtn.text(favoriteDrinks[drinkId].strDrink);
-        // favoriteBtn.text(resultUrl[urlRecipe]).hide();
         favoriteBtn.appendTo("#favorite-btn-container");
-        console.log(drinkId.strDrink);
-        // console.log(urlRecipe);
+        console.log(drinkId);
+    
     }
 });
 

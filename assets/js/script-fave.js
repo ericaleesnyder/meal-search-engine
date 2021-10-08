@@ -15,7 +15,7 @@ function displayFavCards(favArr) {
         </div>
         <div class="card-tabs">
           <ul class="card-action">
-            <li class="tab"><a href="${storeFav[i].url}">Link</a></li>
+            <li class="tab"><a href="${storeFav[i].url}" target="blank">Link</a></li>
           </ul>
         </div>
       </div>
