@@ -9,6 +9,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <!-- link for responsive navbar -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style-drink-results.css" />
     <title>Document</title>
   </head>
@@ -17,17 +19,25 @@
       <nav>
         <div class="nav-wrapper">
           <a href="index.html" class="brand-logo right">Rapid Recipes</a>
-          <ul id="nav-mobile" class="left">
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="index.html">Home</a></li>
             <li><a href="fav.html">Favorites</a></li>
           </ul>
         </div>
       </nav>
+      <!-- responsive navbar -->
+      <ul class="sidenav" id="mobile-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fav.html">Favorites</a></li>
+      </ul>
     </header>
     <!--MAIN PAGE CONTAINER = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
     <main class="row">
       <!--left side of webpage - col-->
-      <aside class="col m5 l3">
+      <aside class="col s12 m5 l3 container">
         <!--card container for search section-->
         <div class="card-panel">
           <h4>Search for a drink Recipe!</h4>
@@ -63,10 +73,10 @@
         ></a>
       </aside>
 
-      <section class="col m7 l9">
-        <!--right side of webpage - col-->
+      <!--right side of webpage - col-->    
+      <section class="col s12 m7 l9">
         <div
-          class="row"
+          class="row "
           style="
             display: flex;
             flex-direction: row;
@@ -172,6 +182,7 @@
         <div class="container">© 2021 VEER Rapid Recipes</div>
       </div>
     </footer>
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
