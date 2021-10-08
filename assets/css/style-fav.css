@@ -1,45 +1,49 @@
 :root {
-    --pearl-gray: #ececec;
-    --light-peach: #f7cbbf;
-    --apricot: #fcab98;
-    --medium-green: #59c7b4;
-    --light-emerald: #1b9d6b;
-    --parrot-green: #628a28;
-  }
+  --pearl-gray: #ececec;
+  --light-peach: #f7cbbf;
+  --apricot: #fcab98;
+  --medium-green: #59c7b4;
+  --light-emerald: #1b9d6b;
+  --parrot-green: #628a28;
+}
 
 html,
-  body {
+body {
   height: 100%;
   margin: 0;
   padding: 0;
 }
-
-  .nav-wrapper{
-      background-color: var(--apricot);
-  }
-
-  .containercard {  
-    content: "";
-    clear: both;
-    display: table;
-    padding: 10px;
-
+/* copy from here for the nav bar */
+.nav-wrapper {
+  background-color: var(--apricot);
 }
+
+.brand-logo {
+  margin-left: 20px;
+}
+/* to here */
+
+.containercard {
+  content: "";
+  clear: both;
+  display: table;
+  padding: 10px;
+}
+
 .card {
-  float:left;
+  float: left;
   box-shadow: rgba(0, 0, 0, 0.22) 0px 2px 8px 0px;
-  max-width: 190px;
+  width: 190px;
   max-height: 190px;
-  padding: 5x;
   margin: 50px;
 }
 
-.page-footer{
-     left: 0;
-   bottom: 0;
-   width: 100%;
-   }
-p{
+.page-footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+p {
   font-size: 15px;
   text-align: center;
 }
