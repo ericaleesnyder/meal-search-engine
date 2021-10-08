@@ -12,8 +12,11 @@
 .nav-wrapper {
     position: fixed;
     top: 0;
-    width: 100%
+    width: 100%;
+    background-color: var(--apricot);
 }
+
+
 .card{
     --hue: var(--hue-neutral) padding: 0;
       margin: 0;
