@@ -6,6 +6,11 @@ var allDrinks = {};
 var allFavoriteDrinkJSON = localStorage.getItem("favorite-drinks");
 var backFoodBtn =$("#back-food")[0];
 
+//function for a responsive navbar 
+$(document).ready(function(){
+  $('.sidenav').sidenav();
+});
+
 function handleFormSubmit(event) {
   event.preventDefault();
   var query = searchInput.val().trim();

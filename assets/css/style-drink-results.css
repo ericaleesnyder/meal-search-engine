@@ -7,13 +7,8 @@
   --parrot-green: #628a28;
 }
 
-main {
-  margin-bottom: 0%;
-}
-
 aside {
   background-color: var(--light-peach);
-  height: 100vh;
 }
 
 .nav-wrapper {
