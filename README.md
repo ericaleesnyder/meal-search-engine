@@ -1,5 +1,29 @@
 # Rapid Recipes
 
+## Table of Contents
+1. 
+
+
+## Project Requirements
+
+- [x]  Use a CSS framework other than Bootstrap:
+- [x]  Be deployed to GitHub Pages:
+- [x] Be interactive (i.e., accept and respond to user input):
+- [x] Use at least two server-side APIs:
+- [x] Does not use alerts, confirms, or prompts (use modals)
+- [x] Use client-side storage to store persistent data:
+- [x] Responsive
+- [x] Have a polished UI:
+- [x] Clean repository that meets quality coding standards 
+- [ ] (add anything else?)
+
+
+
+
+
+
+
+
 ### Useage
 Rapid Recipes can be accessed via this link:
 https://ericaleesnyder.github.io/meal-search-engine/
