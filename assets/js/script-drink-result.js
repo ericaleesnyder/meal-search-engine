@@ -28,7 +28,6 @@ function searchDrinks(query) {
       return response.json();
     })
     .then(function (data) {
-    //   console.log(data.drinks);
       var loopCnt;
       if(data.drinks.length < 10 ) {
         loopCnt = data.drinks.length;
@@ -47,7 +46,7 @@ function searchDrinks(query) {
         drinkCard.find(".favorite-btn").attr("drink-id", drink.idDrink);
         drinkCard.appendTo("#drinks-container");
         // Set new id to recipe container to override hidden and make it show 
-        drinkCard.attr("id", "show-drink");
+        drinkCard.attr("id", "");
       }
     });
 }
@@ -102,22 +101,8 @@ if(allFavoriteDrinkJSON != null) {
     }
 }
 
-// var favoriteDrinksJSON = localStorage.getItem("favorite-drinks");
-// var favoriteDrinks = {};
-// if(favoriteDrinksJSON != null) {
-//     // If there are saved drinks, convert it to an object so we can add to it
-//     favoriteDrinks = JSON.parse(favoriteDrinksJSON);
-// }
-// for(const drinkId in favoriteDrinks) {
-//     var drinkData = favoriteDrinks[drinkId];
-        
-//     var urlRecipe = drinkData['recipe-url'];
-// }
-// function backToFood(event) {
-//   window.history.back();
-// }
-backFoodBtn.addEventListener ('click', function (event){
+
+backFoodBtn.addEventListener('click', function (event){
   event.preventDefault();
-  console.log('hi');
   window.history.back();
-}); // I couldn't figure it out in jQuery, but I got it with plain JS! it works!
+});
