@@ -11,6 +11,10 @@
   background-color: var(--apricot);
 }
 
+.brand-logo {
+  margin-left: 20px;
+}
+
 main {
   /* display: flex; */
   margin-bottom: 0;

@@ -22,6 +22,9 @@
     background-color: var(--apricot);
 }
 
+.brand-logo {
+  margin-left: 20px;
+}
 
 .card{
     --hue: var(--hue-neutral) padding: 0;

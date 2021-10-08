@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compiled and minified CSS -->
+    <link
+    href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style-food-results.css"> <!--linked style css in case we want to override materialize content-->
@@ -14,15 +18,30 @@
 <body>
   <!-- Header from Riri's Page -->
   <header>
-    <nav>
-      <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo right">Rapid Recipes</a>
-        <ul id="nav-mobile" class="left">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="fav.html">Favorites</a></li>
-        </ul>
-      </div>
-    </nav>
+    <!--nav bar copy from here-->
+    <header>
+      <nav>
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo"> Rapid Recipes</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul class="right hide-on-med-and-down">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="food-results.html">Food Results</a></li>
+            <li><a href="drink-results.html">Drink Results</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="food-results.html">Food Results</a></li>
+        <li><a href="drink-results.html">Drink Results</a></li>
+      </ul>
+    </header>
+    <main>
+      <!--nav bar to here-->
   </header>
 
   <!--MAIN PAGE = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
@@ -110,7 +129,13 @@
     </div>
   </footer>
     <!-- Compiled and minified JavaScript -->
- <script src="./assets/js/script-food-result.js"></script>
+ 
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>   
+  <script src="./assets/js/script-food-result.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>          
 </body>
 </html>
