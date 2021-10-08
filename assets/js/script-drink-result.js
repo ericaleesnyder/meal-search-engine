@@ -72,10 +72,9 @@ $(".favorite-btn").on("click", function() {
         favoriteBtn.attr("id", "");
         favoriteBtn.attr("href", favoriteDrinks[drinkId].urlRecipe);
         favoriteBtn.text(favoriteDrinks[drinkId].strDrink);
-        // favoriteBtn.text(resultUrl[urlRecipe]).hide();
         favoriteBtn.appendTo("#favorite-btn-container");
-        console.log(drinkId.strDrink);
-        // console.log(urlRecipe);
+        console.log(drinkId);
+    
     }
 });
 
@@ -102,14 +101,16 @@ if(allFavoriteDrinkJSON != null) {
     }
 }
 
-// var favoriteDrinksJSON = localStorage.getItem("favorite-drinks");
-// var favoriteDrinks = {};
-// if(favoriteDrinksJSON != null) {
-//     // If there are saved drinks, convert it to an object so we can add to it
-//     favoriteDrinks = JSON.parse(favoriteDrinksJSON);
-// }
-// for(const drinkId in favoriteDrinks) {
-//     var drinkData = favoriteDrinks[drinkId];
-        
-//     var urlRecipe = drinkData['recipe-url'];
-// }
+var favoriteDrinksJSON = localStorage.getItem("favorite-drinks");
+var favoriteDrinks = {};
+if(favoriteDrinksJSON != null) {
+    // If there are saved drinks, convert it to an object so we can add to it
+    favoriteDrinks = JSON.parse(favoriteDrinksJSON);
+}
+for(const drinkId in favoriteDrinks) {
+    var drinkName = favoriteDrinks[drinkId].strDrink;
+    console.log(favoriteDrinks[drinkId]);
+    console.log(drinkName);
+    var drinkUrl = favoriteDrinks[drinkId]['recipe-url'];
+    console.log(drinkUrl);
+}

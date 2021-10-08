@@ -4,7 +4,7 @@ var favoritedRecipes = [];
 
 
 let storeFav = JSON.parse(localStorage.getItem("fav food")) || []; 
-console.log(storeFav[0].name)
+// console.log(storeFav[0].name)
 
 function displayFavCards (favArr) {
   for(let i =0; i < favArr.length; i++){
@@ -17,7 +17,7 @@ function displayFavCards (favArr) {
         </div>
         <div class="card-tabs">
           <ul class="card-action">
-            <li class="tab"><a href="${storeFav[i].url}">Link</a></li>
+            <li class="tab"><a href="${storeFav[i].url}" target="blank">Link</a></li>
           </ul>
         </div>
       </div>
@@ -26,7 +26,24 @@ function displayFavCards (favArr) {
 
 displayFavCards(storeFav);
 
-
+var favoriteDrinksJSON = localStorage.getItem("favorite-drinks");
+var favoriteDrinks = {};
+if(favoriteDrinksJSON != null) {
+    // If there are saved drinks, convert it to an object so we can add to it
+    favoriteDrinks = JSON.parse(favoriteDrinksJSON);
+}
+for(const drinkId in favoriteDrinks) {
+    var drinkName = favoriteDrinks[drinkId].strDrink;
+    console.log(favoriteDrinks[drinkId]);
+    console.log(drinkName);
+    var drinkUrl = favoriteDrinks[drinkId]['recipe-url'];
+    console.log(drinkUrl);
+    var newDrink = $("#drink-card").clone(true);
+    newDrink.attr("id", "");
+    newDrink.find(".drink-name").text(drinkName);
+    newDrink.find(".tab").find("a").attr("href", drinkUrl);
+    newDrink.appendTo("#cardDiv");
+}
 
 // when page load
 // check local storage for the storeFav
