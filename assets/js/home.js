@@ -26,5 +26,9 @@ console.log("Valeria Test");
 //----------------SENDS YOU TO THE NEXT PAGE-------//
 
 
- 
+ // this is the JQUry function for the navbar must be copied
+$(document).ready(function () {
+  $(".sidenav").sidenav();
+});
+
 

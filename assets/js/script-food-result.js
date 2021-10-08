@@ -147,4 +147,10 @@ drinksPage.addEventListener('click', function() {
   location.assign(drinksLocation);
 })
 
+// this is the JQUry function for the navbar must be copied
+$(document).ready(function () {
+  $(".sidenav").sidenav();
+});
+
+
 init();
