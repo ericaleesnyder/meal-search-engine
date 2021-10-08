@@ -157,7 +157,7 @@ function renderFavs () {
     
     favoritedBtn.textContent = recipeAdd
     favoritedBtn.setAttribute('data-index', i);
-    favoritedBtn.setAttribute('class', 'waves-effect waves-light btn button');
+    favoritedBtn.setAttribute('class', 'waves-effect waves-light btn button truncate');
     favoritedBtn.setAttribute('href', urlAdd)
     favoritedBtn.setAttribute('target', 'blank');
     
