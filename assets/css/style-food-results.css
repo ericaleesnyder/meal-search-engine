@@ -7,9 +7,13 @@
   --parrot-green: #628a28;
 }
 
+main {
+  display: flex;
+  margin-bottom: 0;
+}
+
 aside {
   background-color: var(--light-peach);
-  height: 100vh;
 }
 
 .recipe-card {
@@ -19,4 +23,12 @@ aside {
 .button {
   width: 100%;
   margin: 10px 0;
+}
+
+.full-height {
+  flex: 1;
+}
+
+footer {
+  margin-top: 0;
 }

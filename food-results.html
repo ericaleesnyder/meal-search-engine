@@ -5,15 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style-food-results.css"> <!--linked style css in case we want to override materialize content-->
     
     <title>Document</title>
 </head>
 <body>
-  <div class="row"> <!--MAIN PAGE = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
-    <aside class="col s3"> <!--left side of webpage - column?-->
-      <div> 
+  <!-- Header from Riri's Page -->
+  <header>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="index.html" class="brand-logo right">Rapid Recipes</a>
+        <ul id="nav-mobile" class="left">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="food-results.html">Food Results</a></li>
+          <li><a href="drink-results.html">Drink Results</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!--MAIN PAGE = ROW SO ASIDE AND SECTION CAN BE COLUMNS-->
+  <main class="row">
+    <aside class="col s3 full-height"> <!--left side of webpage-->
+      <div class="card-panel"> 
         <h4>Search for a Recipe!</h4>
         <p>In the mood for something else? Search with a different ingredient!</p>
         <form class="row">
@@ -24,10 +40,10 @@
           </div>
         </form>
       </div>
-      <div>
+      <div class="card-panel">
         <h4>Favorite Recipes</h4>
-      </div>
-      <div id="user-favorites">
+        <div id="user-favorites" class="full-height">
+        </div>
       </div>
     </aside>
     <section class="col s9" id="card-display">
@@ -37,7 +53,61 @@
       </div>
     </section>
     
-  </div>
+  </main>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h6 class="white-text">Created and Designed by Team VEER</h6>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/ericaleesnyder">Erica Snyder</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/elenaliu0415"
+                >Elena Liu</a
+              >
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/vaal96"
+                >Valeria Aguilar</a
+              >
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="https://github.com/Raghadmalallah"
+                >Raghad Malallah</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6 class="white-text">Links</h6>
+          <ul>
+            <li>
+              <a class="grey-text text-lighten-3" href="index.html">Home</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="food-results.html"
+                >Food Results</a
+              >
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="drink-results.html"
+                >Drink Results</a
+              >
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3" href="fav.html"
+                >Your Favorite
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright center">
+      <div class="container">© 2021 VEER Rapid Recipes</div>
+    </div>
+  </footer>
     <!-- Compiled and minified JavaScript -->
  <script src="./assets/js/script-food-result.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>          

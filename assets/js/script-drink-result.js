@@ -4,6 +4,7 @@ var searchForm = $("#search-form");
 var apiRecipeURL = "https://www.thecocktaildb.com/drink/";
 var allDrinks = {};
 var allFavoriteDrinkJSON = localStorage.getItem("favorite-drinks");
+var backFoodBtn =$("#back-food")[0];
 
 function handleFormSubmit(event) {
   event.preventDefault();
@@ -101,16 +102,22 @@ if(allFavoriteDrinkJSON != null) {
     }
 }
 
-var favoriteDrinksJSON = localStorage.getItem("favorite-drinks");
-var favoriteDrinks = {};
-if(favoriteDrinksJSON != null) {
-    // If there are saved drinks, convert it to an object so we can add to it
-    favoriteDrinks = JSON.parse(favoriteDrinksJSON);
-}
-for(const drinkId in favoriteDrinks) {
-    var drinkName = favoriteDrinks[drinkId].strDrink;
-    console.log(favoriteDrinks[drinkId]);
-    console.log(drinkName);
-    var drinkUrl = favoriteDrinks[drinkId]['recipe-url'];
-    console.log(drinkUrl);
-}
+// var favoriteDrinksJSON = localStorage.getItem("favorite-drinks");
+// var favoriteDrinks = {};
+// if(favoriteDrinksJSON != null) {
+//     // If there are saved drinks, convert it to an object so we can add to it
+//     favoriteDrinks = JSON.parse(favoriteDrinksJSON);
+// }
+// for(const drinkId in favoriteDrinks) {
+//     var drinkData = favoriteDrinks[drinkId];
+        
+//     var urlRecipe = drinkData['recipe-url'];
+// }
+// function backToFood(event) {
+//   window.history.back();
+// }
+backFoodBtn.addEventListener ('click', function (event){
+  event.preventDefault();
+  console.log('hi');
+  window.history.back();
+}); // I couldn't figure it out in jQuery, but I got it with plain JS! it works!
