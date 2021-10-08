@@ -1,63 +1,3 @@
-//HOMEPAGE
-
-//navbar - grab from Ragha's page and then:
-//confirm links work
-
-//search bar - user input is an ingredient
-//when you click search, 
-//brings you to the food results page
-//food results page uses the user input as the query variable to display recipes on cards
-
-//food results page
-//if the user wants a different ingredient, the search tool re-runs the api pull with new query variable
-//WHEN search is initiated
-//THEN recipe cards are created with an icon to click on for a favorite, name (label), cuisine type, dish type, meal type, a link
-//the user can "favorite" a recipe - favorited recipes stored in aside (think weather homework) - and the favorites page gets these variables too
-//ADD NEXT BUTTON FOR DRINKS SEARCH PAGE
-
-//drinks results page
-//Search tool still in top left - user types ingredient and chooses alcoholic vs non alcoholic
-//WHEN search is initiated
-//THEN recipe cards are created with an icon to click on for a favorite, name (label), cuisine type, dish type, meal type, a link
-//the user can "favorite" a recipe - favorited recipes stored in aside (think weather homework) - and the favorites page gets these variables too
-//ADD NEXT BUTTON FOR FAVORITES PAGE
-
-//FAVORITES PAGE NEEDS TO GET THE USER SELECTIONS FROM PREVIOUS TWO PAGES - local storage
-//all of the favorited recipes (food and drinks) will be displayed
-//each recipe card has the name + link
-
-//VALERIA - search button savies the user input as query variable to local storage AND brings user to food results page
-//ELENA - set variables based on API pulls for :
-//name (label)
-//cuisine type
-//dish type
-//meal type
-//url
-
-//ERICA - work on "favorite" funtionality
-//after elena creates variables, JS for creating the cards with the stuff
-//give riri an array with placeholder recipes and links so she can write the JS to create cards from the array
-// [{"chicken parmesan", "https://......"},
-//{"chicken parmesan", "https://......"},
-//{"risotto", "https://......"}]
-
-//RAGHAD - write the JS to create cards from the array
-
-// var favoritedRecipes = [
-//   {name: "chicken parmesan", url: "https://cafedelites.com/crispy-chicken-parmesan/"},
-//   {name: "eggplant parmesan", url: "https://www.foodnetwork.com/recipes/food-network-kitchen/eggplant-parmesan-recipe-2008982"},
-//   {name: "margarita", url: "https://www.liquor.com/recipes/margarita/"},
-// ]
-
-// function getParams() {
-//      // Get the search params out of the URL (i.e. `?q=london&format=photo`) and convert it to an array (i.e. ['?q=london', 'format=photo'])
-//      var searchParamsArr = document.location.search;
-   
-//      // Get the query and format values
-//      var query = searchParamsArr[0].split('=').pop();
-   
-//      getRecipes(query);
-//    }
 var userFavs = document.getElementById('user-favorites')
 var favoritedRecipes = []
 
@@ -158,7 +98,7 @@ function renderFavs () {
     favoritedBtn.textContent = recipeAdd
     favoritedBtn.setAttribute('data-index', i);
     favoritedBtn.setAttribute('class', 'waves-effect waves-light btn button truncate');
-    favoritedBtn.setAttribute('href', urlAdd)
+    favoritedBtn.setAttribute('href', urlAdd);
     favoritedBtn.setAttribute('target', 'blank');
     
     userFavs.appendChild(favoritedBtn);
@@ -208,16 +148,3 @@ drinksPage.addEventListener('click', function() {
 })
 
 init();
-
-
-// FOR "BACK TO FOOD RECIPE RESULTS" BTN:
-// ADD EVENT LISTENER 
-// (CAN REMOVE THE A TAG BC THE A IS WITHIN A BUTTON. KEEP THE TEXT, BUT REMOVE THE A)
-// ON CLICK
-// WINDOW.HISTORY.BACK 
-
-// backButton.addEventListener('click', 'function() {
-//     window.history.back();
-// })
-
-// might need a prevent default, we'll find out 
