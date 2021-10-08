@@ -7,6 +7,10 @@
   --parrot-green: #628a28;
 }
 
+.nav-wrapper {
+  background-color: var(--apricot);
+}
+
 main {
   display: flex;
   margin-bottom: 0;
