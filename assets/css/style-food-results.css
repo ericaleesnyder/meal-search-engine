@@ -12,7 +12,7 @@
 }
 
 main {
-  display: flex;
+  /* display: flex; */
   margin-bottom: 0;
 }
 
@@ -28,10 +28,10 @@ aside {
   width: 100%;
   margin: 10px 0;
 }
-
+/* 
 .full-height {
   flex: 1;
-}
+} */
 
 footer {
   margin-top: 0;
