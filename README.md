@@ -1,4 +1,4 @@
-# Rapid Recipes
+# 🍔 Rapid Recipes🍤
 
 ## Table of Contents
 
@@ -47,6 +47,36 @@ Our favorites page allows the user to easily view both their food and drink favo
 To ensure a user friendly experience, we also confirmed our mobile responsive layout. We took into account not only the organization of the screen, but also the menu functionality.
 
 <img alt="mobile layout" src="./assets/images/mobile-screenshot.png" height="1200">
+
+## Challenges and lessons learned
+
+Durting the development process, we experienced some ups and downs when working as developers in a team, but we have conquered the obstacles and learned a lot from teamwork and each others.
+
+- 3rd Pary APIs 
+    - When it comes with APIs, you probably don't know what to expect at first. It is important to find an API that fetches information not only related to your project, but also gives you what you want to implement on your functionalities. So set up an simple JS file to test out your APIs and make sure the desired data is fetched successfully, and being supported by the common browsers, or your github pages deployment. Read through the API documentation if there is any.
+- Communication
+    - There is never too much for communication, make sure that you and your teammates are on the same page for each step. Share your schedules! So the team can plan ahead for game plan, group meetings and tasks fulfillment.
+- GitHub
+    - Getting into the correct workflow was difficult. At times we would be making changes to files on our local branch that had had different updates made in main. 
+- New CSS Framework - Materialize 
+    - Working with a new CSS Framework meant we needed to de-bug when things didn’t work the way we were expecting them to.
+- Kanban Board and Issues 
+    - Utilize these great tools to track progress and keep ownership of tasks clear, avoid duplicate works on the same task. 
+- JavaScript 
+    - Understanding the difference between dot notation and bracket notation makes an impact on your functions. 
+
+## Potential features for future development 
+
+- Additional Drink Search Parameters
+    - Having a choice for Alcoholic vs. Non-Alcoholic would allow for a wider user audience and more inclusive experience.
+- Random Ingredient Suggestion
+    - If the user does not have an ingredient in mind, having a randomizer would allow our application to be more flexible.
+- Better Food-Favorites Functionality
+    - Preventing the user from adding a recipe to the favorites twice.
+- Recipe Photos 
+    - Adding recipe photos would be more enticing and exciting for the user!
+- CSS Layout 
+    - Development on fonts, backgroud colors, buttons, etc to better user's visual experience. 
 
 ### Developers:
 
