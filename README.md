@@ -49,8 +49,6 @@ To ensure a user friendly experience, we also confirmed our mobile responsive la
 
 <img alt="mobile layout" src="./assets/images/mobile-screenshot.png" height="1200">
 
-Person 4 - Add challenges/future development + anything else we might need! Maybe a readme table of contents?
-
 ## Challenges and lessons learned
 
 Durting the development process, we experienced some ups and downs when working as developers in a team, but we have conquered the obstacles and learned a lot from teamwork and each others.
@@ -80,3 +78,12 @@ Durting the development process, we experienced some ups and downs when working 
     - Adding recipe photos would be more enticing and exciting for the user!
 - CSS Layout 
     - Development on fonts, backgroud colors, buttons, etc to better user's visual experience. 
+
+### Developers:
+
+## This application was developed by:
+
+- [https://github.com/vaal96] Valeria Aguilar.
+- [https://github.com/ericaleesnyder] Erica Snyder.
+- [https://github.com/elenaliu0415] Elena Liu.
+- [https://github.com/Raghadmalallah] Raghad Malallah.
